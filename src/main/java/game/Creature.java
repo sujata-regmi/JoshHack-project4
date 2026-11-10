@@ -23,8 +23,16 @@ public class Creature {
 	
 	private int maxHp;
 	public int maxHp() { return maxHp; }
-	public void modifyMaxHp(int amount) { maxHp += amount; }
-	
+	/*public void modifyHp(int amount, String causeOfDeath) {
+    hp = CombatRules.calculateNewHp(hp, maxHp, amount);
+    this.causeOfDeath = causeOfDeath;
+
+    if (CombatRules.isDead(hp)) {
+        doAction("die");
+        leaveCorpse();
+        world.remove(this);
+    }
+} */
 	private int hp;
 	public int hp() { return hp; }
 	
