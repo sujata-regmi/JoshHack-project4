@@ -47,7 +47,7 @@ public class CreatureTest {
 
     @Test
     void testModifyHpHealingCap() {
-        creature.modifyHp(200, "healed");
+        creature.modifyHp(200, "gained health");
         assertEquals(100, creature.hp());
     }
 }
