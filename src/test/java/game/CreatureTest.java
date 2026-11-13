@@ -50,4 +50,14 @@ public class CreatureTest {
         creature.modifyHp(200, "gained health");
         assertEquals(100, creature.hp());
     }
+
+    @Test
+    void hpCorpseTest() {
+        creature.modifyHp(-110, "slain by a monster");
+
+        Item corpse = world.item(1, 1, 0);
+        assertNotNull(corpse);
+        assertEquals("josh corpse", corpse.name());
+        assertEquals(500, corpse.foodValue());
+    }
 }
